@@ -160,6 +160,15 @@ body{
 .items{
   font-family: 'Itim';
 }
+.payPal-buttons{
+
+  z-index: 1;
+}
+.checkout{
+  position: fixed;
+  bottom: 0;
+  right: 0;
+}
 @media(min-width: 1600px){
  .shop{
   height: 350vh;

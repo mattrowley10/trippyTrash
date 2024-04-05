@@ -8,6 +8,7 @@ import SingleItem from "./Components/SingleItem";
 import Cart from "./Components/Cart";
 import Clothing from "./Components/Clothing";
 import Items from "./Components/Items";
+import Checkout from "./Components/Checkout";
 function App() {
   return (
     <Router>
@@ -20,6 +21,7 @@ function App() {
           <Route path="/singleItem" element={<SingleItem />} />
           <Route path="/cart" element={<Cart />} />
           <Route path="/items" element={<Items />} />
+          <Route path="/checkout" element={<Checkout />} />
         </Routes>
       </Suspense>
     </Router>

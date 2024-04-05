@@ -1,10 +1,11 @@
 import { useContext } from "react";
 import CartContext from "../Hooks/CartContext.jsx";
 import { AiOutlineMinusCircle } from "react-icons/ai";
+import { useNavigate } from "react-router-dom";
 
 export default function Cart() {
   const { removeFromCart, cart } = useContext(CartContext);
-
+  const nav = useNavigate();
   if (cart == 0) {
     return (
       <div className="nothing-cart flex justify-center pt-10 text-2xl">
@@ -40,6 +41,12 @@ export default function Cart() {
           </div>
         );
       })}
+      <div
+        className="checkout border-4 border-black px-4 bg-white cursor-pointer"
+        onClick={() => nav("/checkout")}
+      >
+        Checkout
+      </div>
     </div>
   );
 }
