@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,300&family=Creepster&family=Fira+Sans:ital,wght@0,300;1,700&family=Itim&family=Open+Sans&family=Raleway:wght@300&family=Rubik+Scribble&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    overflow-y:scroll;
+    overflow-x:hidden;
+    
+  }
+  
+  html, body{
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    overscroll-behavior: none;
+    background-color: #BB3FAD;
+  }
+  
+  
+  .topNav{
+    position: sticky;
+    top: 0;
+    background-color: #009F00;
+    padding: 2rem .5rem 2rem .5rem ;
+    color: #000000;
+    font-family: 'Itim';
+    z-index: 100;
+  }
+  .dropDown{
+    background-color: #F452E5;
+    color:#000000;
+    font-family: 'Itim';
+    font-size: 18px;
+    border: 1px solid #7A5C61;
+    z-index: 0;
+  }
+  .cart-button{
+    margin-top: 5px;
+    margin-left: 6px;
+  }
+.home{
+  height: 90vh;
+  background-color: #BB3FAD;
+}
+.trippy-home-img{
+  width: 50rem;
+  height: 30rem;
+
+}
+.dripping-image{
+  position: relative;
+}
+.dripping-image:before, .dripping-image:after{
+  content: '';
+  position: absolute;
+  background-color: #00FE00;
+  pointer-events: none;
+}
+.dripping-image:before{
+  width: 70px;
+  height: 70px;
+  left: 30%;
+  transform: translateX(-50%) rotate(45deg);
+  animation: drip-animation 4s infinite;
+  
+}
+.dripping-image:after{
+  width: 70px;
+  height: 70px;
+  left: 75%;
+  transform: translateX(-50%) rotate(45deg);
+  animation: drip-animation 2s infinite;
+}
+@keyframes drip-animation{
+  0% {
+    top: 35%;
+    scale: .8;
+    border-radius: 57% 43% 37% 75% / 45% 52% 48% 55%;
+    box-shadow:inset 2px 2px 1px 1px #000000, 10px 20px 10px #000000, 10px 20px 20px #000, inset -10px -10px 15px #000 ;
+  }
+  15%{
+    top: 65%;
+    scale: .5;
+    border-radius:  23% 63% 43% 63%;
+    box-shadow:inset 2px 2px 1px 1px #000000, 10px 20px 10px #000000, 10px 20px 20px #000, inset -10px -10px 15px #000 ;
+  }
+  100% {
+    top: 130%;
+    scale: .2;
+    border-radius: 25% 63% 45% 67% ;
+    box-shadow:inset 2px 2px 1px 1px #000000, 10px 20px 10px #000000, 10px 20px 20px #000, inset -10px -10px 15px #000 ;
+  }
+}
+.home-description{
+  width: 70%;
+  text-align: center;
+  font-size: 24px;
+  z-index: 0;
+  font-family: 'Itim';
+}
+.shop{
+  background-color: #BB3FAD;
+  height: 200vh;
+  font-family: 'Itim';
+}
+.shop-img{
+  height: 30rem;
+  width: 25rem;
+}
+.shop-img-div:hover{
+  border: 2px solid black;
+  box-shadow: 2px 2px 3px 3px black;
+  border-radius: 2%;
+}
+.items-img{
+  height: 30rem;
+  width: 25rem;
+}
+.items-img-div:hover{
+  border: 2px solid black;
+  box-shadow: 2px 2px 3px 3px black;
+  border-radius: 2%;
+}
+.singleItem{
+  background-color: #BB3FAD;
+  font-family: 'Itim';
+  
+}
+.description-div{
+  max-width: 60rem;
+}
+.single-item-img{
+  height: 85vh;
+  width: 40rem;
+}
+.cart{
+  background-color: #BB3FAD;
+  height: 100vh;
+  font-family: 'Itim';
+}
+.cart-img{
+  height: 30rem;
+  width: 25rem;
+}
+.cart-img-div:hover{
+  border: 2px solid black;
+  box-shadow: 2px 2px 3px 3px black;
+  border-radius: 2%;
+}
+.nothing-cart{
+  height: 100vh;
+  background-color: #BB3FAD;
+  font-family: "Itim";
+}
+.clothing{
+  font-family: 'Itim';
+}
+.items{
+  font-family: 'Itim';
+}
+@media(min-width: 1600px){
+ .shop{
+  height: 350vh;
+ }
+}
+@media(max-width: 425px){
+  .trippy-home-img{
+    width: 25rem;
+    height: 15rem;
+  }
+ .single-item-img{
+  height: 30rem;
+ }
+}
