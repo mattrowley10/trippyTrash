@@ -102,7 +102,7 @@ body{
 }
 .shop{
   background-color: #BB3FAD;
-  height: 200vh;
+  /* height: 200vh; */
   font-family: 'Itim';
 }
 .shop-img{
