@@ -40,7 +40,7 @@ export default function Cart() {
                 <div className="ml-2 mt-2 text-left text-1xl">
                   Size {items.size}
                 </div>
-                <div className="ml-2 text-left">{items.price}</div>
+                <div className="ml-2 text-left">${items.price}</div>
                 <div
                   className="mr-2 left-52 w-44 relative bottom-12 border-4 border-black px-4 bg-white cursor-pointer"
                   onClick={() => removeFromCart(items)}

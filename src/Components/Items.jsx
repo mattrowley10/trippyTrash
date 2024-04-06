@@ -5,11 +5,11 @@ import itemsArray from "../Arrays/ItemsArray";
 export default function Items() {
   const nav = useNavigate();
   return (
-    <div className="items flex flex-wrap lg:space-x-12 space-x-0 justify-center">
+    <div className="items flex flex-wrap space-x-0 justify-center">
       {itemsArray.map((items, id) => {
         return (
           <div key={id} className="">
-            <div className="items-img-div mt-10">
+            <div className="items-img-div mt-10 sm:ml-2 lg:ml-12">
               <img
                 src={items.img}
                 alt={items.alt}
@@ -18,7 +18,7 @@ export default function Items() {
               />
               <div className="size-description">
                 <div className="ml-2 mt-2 text-left text-1xl">
-                  {items.price}
+                  ${items.price}
                 </div>
               </div>
             </div>
