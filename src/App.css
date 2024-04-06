@@ -26,7 +26,7 @@ body{
     padding: 2rem .5rem 2rem .5rem ;
     color: #000000;
     font-family: 'Itim';
-    z-index: 100;
+    z-index: 200;
   }
   .dropDown{
     background-color: #F452E5;
@@ -161,7 +161,7 @@ body{
   font-family: 'Itim';
 }
 .payPal-buttons{
-
+  font-family: "Itim";
   z-index: 1;
 }
 .checkout{

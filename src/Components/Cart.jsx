@@ -6,6 +6,17 @@ import { useNavigate } from "react-router-dom";
 export default function Cart() {
   const { removeFromCart, cart } = useContext(CartContext);
   const nav = useNavigate();
+
+  const calculateTotal = () => {
+    let total = 0;
+    cart.forEach((item) => {
+      total += parseFloat(item.price);
+    });
+    return total;
+  };
+
+  const totalAmount = calculateTotal();
+
   if (cart == 0) {
     return (
       <div className="nothing-cart flex justify-center pt-10 text-2xl">
@@ -42,8 +53,8 @@ export default function Cart() {
         );
       })}
       <div
-        className="checkout border-4 border-black px-4 bg-white cursor-pointer"
-        onClick={() => nav("/checkout")}
+        className="checkout border-4 border-black px-4 bg-white cursor-pointer mt-10"
+        onClick={() => nav("/checkout", { state: { totalAmount } })}
       >
         Checkout
       </div>
