@@ -1,9 +1,14 @@
 import React from "react";
 import { PayPalScriptProvider, PayPalButtons } from "@paypal/react-paypal-js";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
+import { useContext } from "react";
+import CartContext from "../Hooks/CartContext";
 
 export default function Checkout() {
   const location = useLocation();
+  const nav = useNavigate();
+  const { cart, removeFromCart } = useContext(CartContext);
+
   const { totalAmount } = location.state;
 
   console.log(totalAmount);
@@ -13,7 +18,7 @@ export default function Checkout() {
       <PayPalScriptProvider
         options={{
           clientId:
-            "AQEZR-xS3o3UCFssJc3__lfOVjtGeu8jsbotU_mSp9f2Nyu4lf3eWTUdArngK5qUzoTldxn8zQd7PEgd",
+            "ATA0W2m04gRXDMCv_mE2OE-DwvK8n9zpdliUaa0iaUY2-arILWM9aQODhl3TrkwagYgXseSm6U5Shcv8",
         }}
       >
         <div>
@@ -38,6 +43,10 @@ export default function Checkout() {
                 console.log(
                   "Transaction Completed by " + details.payer.name.given_name
                 );
+                cart.forEach((item) => {
+                  removeFromCart(item);
+                });
+                nav("/");
               });
             }}
           />
