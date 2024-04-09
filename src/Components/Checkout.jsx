@@ -13,7 +13,7 @@ export default function Checkout() {
       <PayPalScriptProvider
         options={{
           clientId:
-            "ATA0W2m04gRXDMCv_mE2OE-DwvK8n9zpdliUaa0iaUY2-arILWM9aQODhl3TrkwagYgXseSm6U5Shcv8",
+            "AQEZR-xS3o3UCFssJc3__lfOVjtGeu8jsbotU_mSp9f2Nyu4lf3eWTUdArngK5qUzoTldxn8zQd7PEgd",
         }}
       >
         <div>
