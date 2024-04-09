@@ -51,6 +51,7 @@ body{
 }
 .dripping-image{
   position: relative;
+  margin-bottom: 2rem;
 }
 .dripping-image:before, .dripping-image:after{
   content: '';
@@ -181,4 +182,30 @@ body{
  .single-item-img{
   height: 30rem;
  }
+ .home{
+  
+ }
+ .home-description{
+  width: 90%;
+ }
+ @keyframes drip-animation{
+  0% {
+    top: 35%;
+    scale: .8;
+    border-radius: 57% 43% 37% 75% / 45% 52% 48% 55%;
+    box-shadow:inset 2px 2px 1px 1px #000000, 10px 20px 10px #000000, 10px 20px 20px #000, inset -10px -10px 15px #000 ;
+  }
+  15%{
+    top: 65%;
+    scale: .5;
+    border-radius:  23% 63% 43% 63%;
+    box-shadow:inset 2px 2px 1px 1px #000000, 10px 20px 10px #000000, 10px 20px 20px #000, inset -10px -10px 15px #000 ;
+  }
+  100% {
+    top: 250%;
+    scale: .2;
+    border-radius: 25% 63% 45% 67% ;
+    box-shadow:inset 2px 2px 1px 1px #000000, 10px 20px 10px #000000, 10px 20px 20px #000, inset -10px -10px 15px #000 ;
+  }
+}
 }
